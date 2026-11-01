@@ -1,0 +1,17 @@
+{
+  "name": "mini-patricia-trie",
+  "version": "0.1.0",
+  "description": "A compact Patricia trie (radix tree) for storing sparse sets of strings.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
