@@ -25,3 +25,10 @@ A plain trie stores one node per character, which wastes memory when most paths 
 ## Edge cases
 
 The empty string is a valid key. It is stored as a terminal flag on the root, so `insert('')` works and `has('')` returns `true` after it. Deleting a word can leave a node with one child; the delete routine merges that node back into its parent so the trie stays compressed. `words()` and `wordsWithPrefix()` return results in lexicographic order.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
